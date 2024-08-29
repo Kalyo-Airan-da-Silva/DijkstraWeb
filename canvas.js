@@ -72,7 +72,7 @@ function draw() {
         ctx.moveTo(posIni[0],posIni[1])
         ctx.lineTo(posDes[0],posDes[1]);
         ctx.lineWidth = 2
-        if(caminho.includes(data.edges[i].from) && caminho.includes(data.edges[i].to)){
+        if(caminho.indexOf(data.edges[i].to) == caminho.indexOf(data.edges[i].from)-1 || caminho.indexOf(data.edges[i].to) == caminho.indexOf(data.edges[i].from)+1){
             ctx.strokeStyle = "red"
         }else{
             ctx.strokeStyle = "black"
